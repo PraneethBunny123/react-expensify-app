@@ -1,0 +1,15 @@
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"],
+    "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread",
+      ],
+      "test": [
+        "jest"
+      ]
+  //     "env": {
+  //       "test": {
+  //         "plugins": ["@babel/plugin-transform-modules-commonjs"]
+  //       }
+  // }
+}
