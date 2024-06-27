@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
     return {
         entry: "./src/app.js",
         output: {
-            path: pathName.join(__dirname, 'public'),
+            path: pathName.join(__dirname, 'public', 'dist'),
             filename: "bundle.js"
         },
         module: {
@@ -42,7 +42,10 @@ module.exports = (env, argv) => {
             static: {
                 directory: pathName.join(__dirname, 'public')
             },
-            historyApiFallback: true
+            historyApiFallback: true,
+            devMiddleware: {
+                publicPath: '/dist/'
+            }
         }
     }
 }
