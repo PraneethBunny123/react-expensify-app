@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux';
 // import {createRoot} from 'react-dom/client'
 import configureStore from './store/configureStore';
-import { addExpense } from './actions/expenses';
+import { startSetExpenses } from './actions/expenses';
 import getVisibleExpenses from './selectors/expenses';
 
 import 'normalize.css/normalize.css'
@@ -28,5 +28,9 @@ const jsx = (
 
 
 // ReactDOM.render(routes)
-ReactDOM.createRoot(container).render(jsx)
+// ReactDOM.createRoot(container).render(jsx)
 
+
+store.dispatch(startSetExpenses()).then(() => {
+    ReactDOM.createRoot(container).render(jsx)
+})
