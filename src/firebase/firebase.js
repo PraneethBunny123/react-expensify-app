@@ -17,7 +17,7 @@ const app = initializeApp(config);
 const db = getDatabase()
 
 
-export { ref, push, onValue, get, child, remove, db as default }
+export { ref, push, onValue, get, child, remove, update, db as default }
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
